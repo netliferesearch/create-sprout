@@ -1,0 +1,23 @@
+{
+  "name": "kickstarter",
+  "version": "1.0.0",
+  "description": "An application scaffolder by Nelife Kickstarter ",
+  "keywords": [
+    "netlife",
+    "netlife starter",
+    "netlife scaffolder",
+    "netlife bootstrapper"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Netlife Design <hei@netlife.com> (https://netlife.com/)",
+  "contributors": [
+    {
+      "name": "Wallace Sidhrée",
+      "email": "i@dreamyguy.com",
+      "url": "http://sidhree.com/"
+    }
+  ],
+  "license": "MIT"
+}

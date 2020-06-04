@@ -1,0 +1,37 @@
+{
+  "name": "fullstack-next-sanity",
+  "version": "1.0.0",
+  "description": "An application scaffolded by Nelife Kickstarter ",
+  "keywords": [
+    "netlife",
+    "netlife starter",
+    "netlife scaffolder",
+    "netlife bootstrapper",
+    "fullstack next sanity",
+    "next sanity",
+    "next",
+    "sanity",
+    "fullstack"
+  ],
+  "main": "config.js",
+  "scripts": {
+    "setup": "cd frontend && npm install && cd ../backend && npm install && cd ..",
+    "preSetup": "echo ⚡  About to install all dependencies needed in both frontend and backend.",
+    "postSetup": "echo 🎉  The application is now fully installed.",
+    "deploy:frontend": "",
+    "deploy:backend": "",
+    "deploy": "npm run deploy:backend && npm run deploy:frontend",
+    "preDeploy": "echo ⚡  About to deploy both frontend and backend.",
+    "postDeploy": "echo 🚀  The application is now fully deployed.",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Netlife Design <hei@netlife.com> (https://netlife.com/)",
+  "contributors": [
+    {
+      "name": "Wallace Sidhrée",
+      "email": "i@dreamyguy.com",
+      "url": "http://sidhree.com/"
+    }
+  ],
+  "license": "MIT"
+}
