@@ -58,6 +58,9 @@
     "console-log-plus": "^1.0.7",
     "gatsby-plugin-eslint": "^2.0.8"
   },
+  "engines": {
+    "node": "^v<% replace with node version %>"
+  },
   "browserslist": [
     ">0.2%",
     "not op_mini all"
