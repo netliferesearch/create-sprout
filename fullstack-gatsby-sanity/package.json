@@ -16,9 +16,37 @@
   "author": "Netlife Design <hei@netlife.com> (https://netlife.com/)",
   "contributors": [
     {
+      "name": "Aleksander Andersen",
+      "url": "https://github.com/lordaust"
+    },
+    {
+      "name": "Haakon Borch",
+      "url": "https://github.com/haakonmb"
+    },
+    {
+      "name": "Kevin Bodi",
+      "url": "https://github.com/KevinBodi"
+    },
+    {
+      "name": "Kristi Faye-Lund",
+      "url": "https://github.com/kfayelun"
+    },
+    {
+      "name": "Lars Tollefsen",
+      "url": "https://github.com/LarsTollefsen"
+    },
+    {
+      "name": "Milosz Hygen",
+      "url": "https://github.com/miloszhygen"
+    },
+    {
+      "name": "Nils Norman Haukås",
+      "url": "https://github.com/nilsnh"
+    },
+    {
       "name": "Wallace Sidhrée",
       "email": "i@dreamyguy.com",
-      "url": "http://sidhree.com/"
+      "url": "https://github.com/dreamyguy"
     }
   ],
   "license": "MIT",
