@@ -1,0 +1,43 @@
+// https://medium.com/skillthrive/build-a-react-accordion-component-from-scratch-using-react-hooks-a71d3d91324b
+
+@import "./../../../scss/2_base/variables";
+@import "./../../../scss/2_base/typography";
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  min-height: 60px;
+  line-height: 1;
+  border-top: $border-solid;
+  &:last-child {
+    border-bottom: $border-solid;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 18px 18px 8px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-image: url("./icon-plus.svg");
+    &.active {
+      background-image: url("./icon-minus.svg");
+    }
+  }
+  &__title {
+    @extend .h2;
+  }
+  &__icon {
+    margin-left: auto;
+  }
+  &__content {
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+  }
+  &__text {
+    padding: 18px;
+  }
+}
