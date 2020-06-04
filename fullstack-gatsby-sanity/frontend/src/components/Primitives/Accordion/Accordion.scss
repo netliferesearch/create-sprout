@@ -1,7 +1,7 @@
 // https://medium.com/skillthrive/build-a-react-accordion-component-from-scratch-using-react-hooks-a71d3d91324b
 
-@import "./../../../scss/2_base/variables";
-@import "./../../../scss/2_base/typography";
+$cl-greylight: #e0e0e0;
+$border-solid: 1px solid $cl-greylight;
 
 .accordion {
   display: flex;
@@ -21,9 +21,9 @@
     cursor: pointer;
     background-position: right center;
     background-repeat: no-repeat;
-    background-image: url("./icon-plus.svg");
+    background-image: url('./icon-plus.svg');
     &.active {
-      background-image: url("./icon-minus.svg");
+      background-image: url('./icon-minus.svg');
     }
   }
   &__title {
