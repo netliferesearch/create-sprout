@@ -8,8 +8,10 @@
     "netlife scaffolder",
     "netlife bootstrapper"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/netliferesearch/kickstarter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netliferesearch/kickstarter.git"
   },
   "author": "Netlife Design <hei@netlife.com> (https://netlife.com/)",
   "contributors": [
@@ -47,5 +49,11 @@
       "url": "https://github.com/dreamyguy"
     }
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "^v12.14.0"
+  }
 }

@@ -52,7 +52,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        short_name: '<% replace with project name %>',
+        short_name: '<% replace with project name kebab-case %>',
         name: '<% replace with project name %>',
         // This path is relative to the root of the site. All icons are generated based on this one.
         icon: 'src/images/logo512.png',

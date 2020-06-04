@@ -1,7 +1,7 @@
 {
-  "name": "fullstack-gatsby-sanity",
+  "name": "<% replace with project name kebab-case %>",
   "version": "1.0.0",
-  "description": "An application scaffolded by Nelife Kickstarter ",
+  "description": "<% replace with project description %>",
   "keywords": [
     "netlife",
     "netlife starter",
@@ -14,6 +14,11 @@
     "fullstack"
   ],
   "author": "Netlife Design <hei@netlife.com> (https://netlife.com/)",
+  "homepage": "<% replace with site url %>",
+  "repository": {
+    "type": "git",
+    "url": "<% replace with project repo full url %>.git"
+  },
   "contributors": [
     {
       "name": "Aleksander Andersen",
