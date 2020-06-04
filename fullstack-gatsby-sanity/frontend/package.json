@@ -6,7 +6,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "<% replace with project repo %>"
+    "url": "<% replace with project repo full url %>"
   },
   "author": {
     "name": "Netlife Design",
@@ -54,11 +54,9 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "yarn clean && gatsby develop",
-    "test": "jest",
     "build": "gatsby clean && gatsby build"
   },
   "dependencies": {
-    "esm": "^3.2.25",
     "gatsby": "^2.19.18",
     "gatsby-image": "^2.2.41",
     "gatsby-plugin-manifest": "^2.2.41",
