@@ -13,18 +13,6 @@
     "sanity",
     "fullstack"
   ],
-  "main": "config.js",
-  "scripts": {
-    "setup": "cd frontend && npm install && cd ../backend && npm install && cd ..",
-    "preSetup": "echo ⚡  About to install all dependencies needed in both frontend and backend.",
-    "postSetup": "echo 🎉  The application is now fully installed.",
-    "deploy:frontend": "",
-    "deploy:backend": "",
-    "deploy": "npm run deploy:backend && npm run deploy:frontend",
-    "preDeploy": "echo ⚡  About to deploy both frontend and backend.",
-    "postDeploy": "echo 🚀  The application is now fully deployed.",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Netlife Design <hei@netlife.com> (https://netlife.com/)",
   "contributors": [
     {
@@ -33,5 +21,66 @@
       "url": "http://sidhree.com/"
     }
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "main": "config.js",
+  "scripts": {
+    "deploy": "npm run deploy:backend && npm run deploy:frontend",
+    "deploy:backend": "",
+    "deploy:frontend": "",
+    "postDeploy": "echo 🚀  The application is now fully deployed.",
+    "postSetup": "echo 🎉  The application is now fully installed.",
+    "preDeploy": "echo ⚡  About to deploy both frontend and backend.",
+    "preSetup": "echo ⚡  About to install all dependencies needed in both frontend and backend.",
+    "prettier": "prettier --write '**/*.{js,css,scss,html,json,md}'",
+    "server:gatsby": "cd web/ && gatsby serve",
+    "server:sanity": "node lib/sanityStart.js",
+    "server:web": "node lib/gatsbyStart.js",
+    "setup": "npm i @sanity/cli -g && npm i && cd frontend && npm install && cd ../backend && npm install && cd ..",
+    "test": "jest --verbose --watch",
+    "test:e2e:open": "cypress open --config fileServerFolder=tests/e2e/cypress",
+    "test:e2e:run": "cypress run --config fileServerFolder=tests/e2e/cypress",
+    "test:sanity": "node lib/sanityCheck.js",
+    "test:travis": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "esm": "^3.2.25",
+    "jsdom": "^16.2.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^10.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.1.0",
+    "babel-preset-gatsby": "^0.2.29",
+    "cypress": "^4.0.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.4.0",
+    "gatsby-plugin-eslint": "^2.0.8",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0",
+    "shelljs": "^0.8.3"
+  },
+  "engines": {
+    "node": "^v12.14.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not op_mini all"
+  ]
 }
