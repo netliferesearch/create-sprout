@@ -1,2 +1,2 @@
-GATSBY_ACTIVE_ENV = 'develop'
+GATSBY_ACTIVE_ENV = <% replace with gatsby active environment %>
 SANITY_TOKEN = sanityTokenxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

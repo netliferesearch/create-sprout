@@ -5,7 +5,7 @@
   },
   "api": {
     "projectId": "overriden-by-env-file",
-    "dataset": "production"
+    "dataset": "overriden-by-env-file"
   },
   "plugins": [
     "@sanity/base",

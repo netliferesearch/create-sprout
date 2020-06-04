@@ -5,5 +5,5 @@
 # https://www.sanity.io/docs/studio-environment-variables#dot-env-files-env-f5e9e3158896
 
 # These variables are set by Sanity, so don't change their names!
-SANITY_STUDIO_API_PROJECT_ID = ''
-SANITY_STUDIO_API_DATASET = ''
+SANITY_STUDIO_API_PROJECT_ID = <% replace with sanity project id %>
+SANITY_STUDIO_API_DATASET = <% replace with sanity current dataset %>
