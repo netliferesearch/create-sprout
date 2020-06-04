@@ -10,7 +10,11 @@ async function pageChildResolver(pageId) {
     .items([
       S.listItem()
         .title('Edit page')
-        .child(S.document().schemaType('page').documentId(pageId)),
+        .child(
+          S.document()
+            .schemaType('page')
+            .documentId(pageId)
+        ),
       S.listItem()
         .title('Sub-pages')
         .child(

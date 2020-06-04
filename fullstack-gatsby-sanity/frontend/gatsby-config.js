@@ -22,14 +22,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require("autoprefixer")],
+        postCssPlugins: [require('autoprefixer')],
       },
     },
     {
       resolve: `gatsby-plugin-react-helmet`,
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /components/,
@@ -52,33 +52,33 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        short_name: "<% replace with project name %>",
-        name: "<% replace with project name %>",
+        short_name: '<% replace with project name %>',
+        name: '<% replace with project name %>',
         // This path is relative to the root of the site. All icons are generated based on this one.
-        icon: "src/images/logo512.png",
-        start_url: ".",
-        display: "standalone",
-        theme_color: "#000000",
-        background_color: "#ffffff",
+        icon: 'src/images/logo512.png',
+        start_url: '.',
+        display: 'standalone',
+        theme_color: '#000000',
+        background_color: '#ffffff',
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: "<% replace with site url %>",
-        sitemap: "<% replace with site url %>/sitemap.xml",
+        host: '<% replace with site url %>',
+        sitemap: '<% replace with site url %>/sitemap.xml',
         env: {
           development: {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
+            policy: [{ userAgent: '*', disallow: ['/'] }],
           },
           production: {
-            policy: [{ userAgent: "*", allow: "/" }],
+            policy: [{ userAgent: '*', allow: '/' }],
           },
         },
       },
     },
     {
-      resolve: "gatsby-source-sanity",
+      resolve: 'gatsby-source-sanity',
       options: {
         projectId,
         dataset: sanityDataset,
@@ -86,7 +86,7 @@ module.exports = {
         // and add a token with read permissions
         token: process.env.SANITY_TOKEN,
         watchMode: true,
-        overlayDrafts: activeEnv !== "production",
+        overlayDrafts: activeEnv !== 'production',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

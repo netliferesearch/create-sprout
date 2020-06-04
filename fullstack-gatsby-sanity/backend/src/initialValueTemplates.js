@@ -13,7 +13,7 @@ export default [
         type: 'string',
       },
     ],
-    value: (parameters) => ({
+    value: parameters => ({
       parent: { _ref: parameters.parentPageId },
     }),
   }),
