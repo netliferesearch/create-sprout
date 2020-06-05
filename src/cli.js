@@ -4,6 +4,7 @@
 import arg from "arg";
 import inquirer from "inquirer";
 import { createSprout } from "./main";
+import defaults from "./defaults";
 
 // TODO: This should preferably come from a config, with sensible default values
 const defaultTemplate = "Fullstack Gatsby Sanity";
@@ -16,17 +17,17 @@ function parseArgumentsIntoOptions(rawArgs) {
       "--install": Boolean,
       "-g": "--git",
       "-y": "--yes",
-      "-i": "--install",
+      "-i": "--install"
     },
     {
-      argv: rawArgs.slice(2),
+      argv: rawArgs.slice(2)
     }
   );
   return {
     skipPrompts: args["--yes"] || false,
     git: args["--git"] || false,
     template: args._[0],
-    runInstall: args["--install"] || false,
+    runInstall: args["--install"] || false
   };
 }
 
@@ -35,7 +36,7 @@ async function prompForMissingOptions(options) {
   if (options.skipPrompts) {
     return {
       ...options,
-      template: options.template || defaultTemplate,
+      template: options.template || defaultTemplate
     };
   }
   // Define prompt questions
@@ -46,7 +47,7 @@ async function prompForMissingOptions(options) {
       name: "template",
       message: "Please choose which project template to use",
       choices: ["Fullstack Gatsby Sanity", "Fullstack Next Sanity"],
-      default: defaultTemplate,
+      default: defaultTemplate
     });
   }
   if (!options.git) {
@@ -54,12 +55,16 @@ async function prompForMissingOptions(options) {
       type: "confirm",
       name: "git",
       message: "Initialize a git repository",
-      default: false,
+      default: false
     });
   }
 
   // TODO: These strings should be set through the CLI, with gracious fallbacks
-
+  questions.push({
+    type: "input",
+    name: "defaults",
+    message: "Get default-values for each value to be replaced"
+  });
   // gatsby active environment - develop
   // node version - 12.14.0
   // owners name - Client Inc.
@@ -79,7 +84,7 @@ async function prompForMissingOptions(options) {
   return {
     ...options,
     template: options.template || answers.template,
-    git: options.git || answers.git,
+    git: options.git || answers.git
   };
 }
 
