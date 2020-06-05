@@ -93,15 +93,15 @@ Certain parts of **Netlife Sprout** are based on, inspired by and/or borrowed fr
   - Heavily based on [Create Some App][2], by [Wallace Sidhrée](https://github.com/dreamyguy).
   - Inspired by [Pegmata][3], by [Milosz Hygen](https://github.com/miloszhygen).
 - **Styles & components**:
-  - Initial setup by [Kristi Faye-Lund](https://github.com/kfayelun) & [Leo Toneff](https://github.com/bragle).
+  - Initial setup by [Kristi Faye-Lund](https://github.com/kfayelun), [Leo Toneff](https://github.com/bragle) & [Lars Tollefsen - @LarsTollefsen](https://github.com/LarsTollefsen).
 - **Documentation**:
-  - Initial research by [Haakon Borch](https://github.com/haakonmb).
+  - Initial research by [Haakon Borch](https://github.com/haakonmb) & [Lars Tollefsen](https://github.com/LarsTollefsen).
 - **Error logging**:
   - Initial research by [Sjur Bjørndalsæter](https://github.com/kodehode).
 - **Gatsby**:
   - Initial setup by [Wallace Sidhrée](https://github.com/dreamyguy).
 - **Sanity**:
-  - Initial setup by [Kevin Bodi - @KevinBodi](https://github.com/KevinBodi).
+  - Initial setup by [Kevin Bodi](https://github.com/KevinBodi).
 - **Testing rig**:
   - Heavily based on [Figmatron 2000][4], by [Wallace Sidhrée](https://github.com/dreamyguy).
 
