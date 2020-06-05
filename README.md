@@ -82,24 +82,30 @@ Everyone involved in this project deserve a mention and a big thanks. If you got
 - [Lars Tollefsen - @LarsTollefsen](https://github.com/LarsTollefsen)
 - [Leo Toneff - @bragle](https://github.com/bragle)
 - [Milosz Hygen - @miloszhygen](https://github.com/miloszhygen)
-- [Nils Norman Haukås - @nilsnh](https://github.com/nilsnh)
 - [Sjur Bjørndalsæter - @kodehode](https://github.com/kodehode)
 - [Wallace Sidhrée - @dreamyguy](https://github.com/dreamyguy)
 
 ## Sources
 
-Certain parts of **Netlife Sprout** are based on, inspired by and/or borrowed from some great open-source projects:
+Certain parts of **Netlife Sprout** are based on, inspired by and/or borrowed from some great open-source projects. There were great researches done as well:
 
-- **CLI part**:
-  - Heavily based on [Create Some App][2], by [Wallace Sidhrée - @dreamyguy](https://github.com/dreamyguy).
-  - Inspired by [Pegmata][3], by [Milosz Hygen - @miloszhygen](https://github.com/miloszhygen).
-- **Sanity part**:
-  - Heavily based on [Sanity CMS Decent Structure][4], by [Nils Norman Haukås - @nilsnh](https://github.com/nilsnh).
+- **CLI**:
+  - Heavily based on [Create Some App][2], by [Wallace Sidhrée](https://github.com/dreamyguy).
+  - Inspired by [Pegmata][3], by [Milosz Hygen](https://github.com/miloszhygen).
+- **Styles & components**:
+  - Initial setup by [Kristi Faye-Lund](https://github.com/kfayelun) & [Leo Toneff](https://github.com/bragle).
+- **Documentation**:
+  - Initial research by [Haakon Borch](https://github.com/haakonmb).
+- **Error logging**:
+  - Initial research by [Sjur Bjørndalsæter](https://github.com/kodehode).
+- **Gatsby**:
+  - Initial setup by [Wallace Sidhrée](https://github.com/dreamyguy).
+- **Sanity**:
+  - Initial setup by [Kevin Bodi - @KevinBodi](https://github.com/KevinBodi).
 - **Testing rig**:
-  - Heavily based on [Figmatron 2000][5], by [Wallace Sidhrée - @dreamyguy](https://github.com/dreamyguy).
+  - Heavily based on [Figmatron 2000][4], by [Wallace Sidhrée](https://github.com/dreamyguy).
 
 [1]: https://netlife.com
 [2]: https://github.com/dreamyguy/create-some-app
 [3]: https://github.com/miloszhygen/pegmata
-[4]: https://github.com/nilsnh/sanity-cms-decent-structure
-[5]: https://github.com/dreamyguy/figmatron2000
+[4]: https://github.com/dreamyguy/figmatron2000
