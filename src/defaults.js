@@ -4,7 +4,9 @@ export default {
   },
   "node-version": { "<% replace with node version %>": "12.14.0" },
   "owners-name": { "<% replace with owners name %>": "Client Inc." },
-  "": { "<% replace with project description %>": "Client Inc. is blah blah" },
+  "project-description": {
+    "<% replace with project description %>": "Client Inc. is blah blah"
+  },
   "project-name": { "<% replace with project name %>": "The Project Name" },
   "project-kebab-case": {
     "<% replace with project name kebab-case %>": "the-project-name"

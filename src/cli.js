@@ -60,10 +60,14 @@ async function prompForMissingOptions(options) {
   }
 
   // TODO: These strings should be set through the CLI, with gracious fallbacks
-  questions.push({
-    type: "input",
-    name: "defaults",
-    message: "Get default-values for each value to be replaced"
+  Object.keys(defaults).map(defaultKey => {
+    const defaultOption = defaults[defaultKey];
+    return questions.push({
+      type: "input",
+      name: defaultKey,
+      message: defaultOption.message,
+      default: defaultOption.default
+    });
   });
   // gatsby active environment - develop
   // node version - 12.14.0
