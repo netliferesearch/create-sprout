@@ -1,7 +1,7 @@
 {
-  "name": "fullstack-next-sanity",
+  "name": "<% replace with project name kebab-case %>",
   "version": "1.0.0",
-  "description": "An application scaffolded by Nelife Kickstarter ",
+  "description": "<% replace with project description %>",
   "keywords": [
     "netlife",
     "netlife starter",

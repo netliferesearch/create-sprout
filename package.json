@@ -1,17 +1,19 @@
 {
-  "name": "kickstarter",
+  "name": "create-sprout",
   "version": "1.0.0",
-  "description": "An application scaffolder by Nelife Kickstarter ",
+  "description": "An application scaffolder by Nelife.com",
   "keywords": [
+    "create sprout",
     "netlife",
+    "netlife sprout",
     "netlife starter",
     "netlife scaffolder",
     "netlife bootstrapper"
   ],
-  "homepage": "https://github.com/netliferesearch/kickstarter",
+  "homepage": "https://github.com/netliferesearch/create-sprout",
   "repository": {
     "type": "git",
-    "url": "https://github.com/netliferesearch/kickstarter.git"
+    "url": "https://github.com/netliferesearch/create-sprout.git"
   },
   "author": "Netlife Design <hei@netlife.com> (https://netlife.com/)",
   "contributors": [
@@ -58,8 +60,27 @@
     }
   ],
   "license": "MIT",
+  "main": "src/index.js",
+  "bin": {
+    "@netliferesearch/create-sprout": "bin/create-sprout",
+    "create-sprout": "bin/create-sprout"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "arg": "^4.1.3",
+    "chalk": "^4.0.0",
+    "esm": "^3.2.25",
+    "execa": "^4.0.2",
+    "inquirer": "^7.1.0",
+    "just-kebab-case": "^1.1.0",
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0",
+    "pkg-install": "^1.0.0"
   },
   "engines": {
     "node": "^v12.14.0"

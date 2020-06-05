@@ -1,7 +1,7 @@
 const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
 console.log(`Using environment config: '${activeEnv}'`);
 
-const { api, env } = require('./../server/sanity/sanity.json');
+const { api, env } = require('../server/sanity/sanity.json');
 
 const projectId = api.projectId;
 const sanityDataset = activeEnv === 'production' ? api.dataset : env.development.api.dataset;
