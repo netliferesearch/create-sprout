@@ -1,33 +1,53 @@
 export default {
   "gatsby-environment": {
-    "<% replace with gatsby active environment %>": "develop"
+    message: "which gatsby environment?",
+    replace: "<% replace with gatsby active environment %>",
+    default: "develop"
   },
-  "node-version": { "<% replace with node version %>": "12.14.0" },
-  "owners-name": { "<% replace with owners name %>": "Client Inc." },
+  "node-version": {
+    replace: "<% replace with node version %>",
+    default: "12.14.0"
+  },
+  "owners-name": {
+    replace: "<% replace with owners name %>",
+    default: "Client Inc."
+  },
   "project-description": {
-    "<% replace with project description %>": "Client Inc. is blah blah"
+    replace: "<% replace with project description %>",
+    default: "Client Inc. is blah blah"
   },
-  "project-name": { "<% replace with project name %>": "The Project Name" },
+  "project-name": {
+    replace: "<% replace with project name %>",
+    default: "The Project Name"
+  },
   "project-kebab-case": {
-    "<% replace with project name kebab-case %>": "the-project-name"
+    replace: "<% replace with project name kebab-case %>",
+    default: "the-project-name"
   },
   "repo-base-url": {
-    "<% replace with project repo base url %>": "user/the-project-name"
+    replace: "<% replace with project repo base url %>",
+    default: "user/the-project-name"
   },
   "repo-full-url": {
-    "<% replace with project repo full url %>":
-      "https://github.com/user/the-project-name"
+    replace: "<% replace with project repo full url %>",
+    default: "https://github.com/user/the-project-name"
   },
   "sanity-auth-token": {
-    "<% replace with sanity token %>":
+    replace: "<% replace with sanity token %>",
+    default:
       "a lengthy hash string that allows making requests to Sanity Studio through the frontend"
   },
   "sanity-project-id": {
-    "<% replace with sanity project id %>":
+    replace: "<% replace with sanity project id %>",
+    default:
       "a short hash string that connects the local Sanity Studio to the remote one"
   },
   "sanity-dataset": {
-    "<% replace with sanity current dataset %>": "production"
+    replace: "<% replace with sanity current dataset %>",
+    default: "production"
   },
-  "site-url": { "<% replace with site url %>": "https://the-project-name.com" }
+  "site-url": {
+    replace: "<% replace with site url %>",
+    default: "https://the-project-name.com"
+  }
 };
