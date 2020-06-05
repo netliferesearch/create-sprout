@@ -25,8 +25,10 @@ Everyone involved in this project deserve a mention and a big thanks. If you got
 - [Kevin Bodi - @KevinBodi](https://github.com/KevinBodi)
 - [Kristi Faye-Lund - @kfayelun](https://github.com/kfayelun)
 - [Lars Tollefsen - @LarsTollefsen](https://github.com/LarsTollefsen)
+- [Leo Toneff - @bragle](https://github.com/bragle)
 - [Milosz Hygen - @miloszhygen](https://github.com/miloszhygen)
 - [Nils Norman Haukås - @nilsnh](https://github.com/nilsnh)
+- [Sjur Bjørndalsæter - @kodehode](https://github.com/kodehode)
 - [Wallace Sidhrée - @dreamyguy](https://github.com/dreamyguy)
 
 ## Sources
