@@ -69,7 +69,7 @@
     "prettier": "^2.0.5"
   },
   "engines": {
-    "node": "^v<% replace with node version %>"
+    "node": "^v12.14.0"
   },
   "prettier": {
     "trailingComma": "es5",
