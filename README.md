@@ -1,4 +1,4 @@
-# Netlife Sprout
+# Netlife Sprout 🌱
 
 > 🌱 A CLI-based scaffolder that outputs tailored project starters.
 
@@ -26,13 +26,13 @@ By default, when running `create-sprout` without any option or flag, **you'll be
 
 But for those interested in automation or simply in saving time, there are some pre-defined CLI commandos at your disposal:
 
-**1. The first config option is the _template/project_ type**
+#### 1. The first config option is the _template/project_ type
 
 Currently `fullstack-gatsby-sanity` or `fullstack-next-sanity`.
 
     create-sprout fullstack-next-sanity
 
-**2. `--yes` or `-y`**
+#### 2. `--yes` or `-y`
 
 When passed, prompts will be skipped. Useful when passing both choices and chosen flags, making the prompt unnecessary.
 
@@ -41,19 +41,63 @@ When passed, prompts will be skipped. Useful when passing both choices and chose
     create-sprout --yes
     create-sprout fullstack-gatsby-sanity -y
 
-**3. `--git` or `-g`**
+#### 3. `--git` or `-g`
 
 When passed, `git init` will be run, initialising a `git` repo with all files unstaged. Default is `false`.
 
     create-sprout fullstack-next-sanity --yes --git
     create-sprout fullstack-next-sanity -y -g
 
-**4. `--install` or `-i`**
+#### 4. `--install` or `-i`
 
 When passed, `npm install` will be run, initialising all dependencies specified in the chosen / tailored `package.json` file.
 
     create-sprout fullstack-next-sanity --yes --git --install
     create-sprout fullstack-next-sanity -y -g -i
+
+#### 5. `--gatsbyDefaultEnvironment`
+
+    create-sprout --gatsbyDefaultEnvironment production
+
+#### 6. `--nodeVersion`
+
+    create-sprout --nodeVersion 12.18.0
+
+#### 7. `--ownersName`
+
+    create-sprout --ownersName 'Owner Inc.'
+
+#### 8. `--projectName`
+
+    create-sprout --projectName 'Nice Project Name'
+
+#### 9. `--projectDescription`
+
+    create-sprout --projectDescription 'Such Wow Description'
+
+#### 10. `--repoOwner`
+
+    create-sprout --repoOwner dreamyguy
+
+#### 11. `--sanityAuthToken`
+
+    create-sprout --sanityAuthToken lkasjflkjasldfjlkajsdkfjlkajsdfkljsalkjdfsomethingsomething
+
+#### 12. `--sanityProjectId`
+
+    create-sprout --sanityProjectId 701kayak107
+
+#### 13. `--sanityDataset`
+
+    create-sprout --sanityDataset production
+
+#### 14. `--siteUrl`
+
+    create-sprout --siteUrl http://thisistheurl.io
+
+Using the full potential of the CLI, with all options, without even installing it first (using `npx`):
+
+    npx create-sprout fullstack-gatsby-sanity --gatsbyDefaultEnvironment envelope --nodeVersion 12.18.0 --ownersName 'Owner Inc.' --projectName 'Naming Names in the Name' --projectDescription 'Such Wow Description' --repoOwner 'Dreamyguy' --sanityAuthToken lkasjflkjasldfjlkajsdkfjlkajsdfkljsalkjdfsomethingsomething --sanityDataset produccione --sanityProjectId 701kayak107 --siteUrl http://thisistheurl.io --yes --git --install
 
 ## What kind of apps are available?
 

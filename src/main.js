@@ -58,7 +58,10 @@ async function replaceStrings(options) {
   const replaceWithDefault = (de, type) => {
     if (de.name === type) {
       const strReplace = de.replace;
-      const strInput = escapeRegex(options[de.name]);
+      let strInput = escapeRegex(options[de.name]);
+      if (type === "repoOwner") {
+        strInput = kebabCase(strInput);
+      }
       const cmd = `grep -rl --exclude-dir={node_modules,dist} --exclude=*.{lock,png,jpg,svg,woff} --exclude=package-lock.json "${strReplace}" * | xargs sed -i '' 's/${strReplace}/${strInput}/g'`;
       if (shelljs.exec(cmd).code !== 0) {
         shelljs.echo(`Error: Failed replaceStrings() for '${type}'`);

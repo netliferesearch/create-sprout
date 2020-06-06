@@ -31,7 +31,7 @@ export default [
   },
   {
     name: "repoOwner",
-    message: "What's the name of the repo owner?",
+    message: "What's the name of the repo owner (user/organisation)?",
     replace: "<% replace with project repo base url %>",
     default: "netliferesearch",
   },

@@ -3,6 +3,7 @@
 
 import arg from "arg";
 import inquirer from "inquirer";
+import kebabCase from "just-kebab-case";
 import { createSprout, getDefaultValue } from "./main";
 import defaults from "./defaults";
 
@@ -58,25 +59,20 @@ async function prompForMissingOptions(options) {
       ...options,
       template: options.template || defaultTemplate,
       gatsbyDefaultEnvironment:
-        options.gatsbyDefaultEnvironment || getDefaultValue("gatsbyDefaultEnvironment"),
-      nodeVersion:
-        options.nodeVersion || getDefaultValue("nodeVersion"),
-      ownersName:
-        options.ownersName || getDefaultValue("ownersName"),
-      projectName:
-        options.projectName || getDefaultValue("projectName"),
+        options.gatsbyDefaultEnvironment ||
+        getDefaultValue("gatsbyDefaultEnvironment"),
+      nodeVersion: options.nodeVersion || getDefaultValue("nodeVersion"),
+      ownersName: options.ownersName || getDefaultValue("ownersName"),
+      projectName: options.projectName || getDefaultValue("projectName"),
       projectDescription:
         options.projectDescription || getDefaultValue("projectDescription"),
-      repoOwner:
-        options.repoOwner || getDefaultValue("repoOwner"),
+      repoOwner: kebabCase(options.repoOwner) || getDefaultValue("repoOwner"),
       sanityAuthToken:
         options.sanityAuthToken || getDefaultValue("sanityAuthToken"),
       sanityProjectId:
         options.sanityProjectId || getDefaultValue("sanityProjectId"),
-      sanityDataset:
-        options.sanityDataset || getDefaultValue("sanityDataset"),
-      siteUrl:
-        options.siteUrl || getDefaultValue("siteUrl"),
+      sanityDataset: options.sanityDataset || getDefaultValue("sanityDataset"),
+      siteUrl: options.siteUrl || getDefaultValue("siteUrl"),
     };
   }
   // Define prompt questions
@@ -90,11 +86,11 @@ async function prompForMissingOptions(options) {
       default: defaultTemplate,
     });
   }
-  defaults.map(def => {
+  defaults.map((def) => {
     if (
       !options.gatsbyDefaultEnvironment &&
       def.name === "gatsbyDefaultEnvironment" &&
-      questions.some(e => e.name !== def.name)
+      questions.some((e) => e.name !== def.name)
     ) {
       questions.push({
         type: "input",
@@ -106,7 +102,7 @@ async function prompForMissingOptions(options) {
     if (
       !options.nodeVersion &&
       def.name === "nodeVersion" &&
-      questions.some(e => e.name !== def.name)
+      questions.some((e) => e.name !== def.name)
     ) {
       questions.push({
         type: "input",
@@ -118,7 +114,7 @@ async function prompForMissingOptions(options) {
     if (
       !options.ownersName &&
       def.name === "ownersName" &&
-      questions.some(e => e.name !== def.name)
+      questions.some((e) => e.name !== def.name)
     ) {
       questions.push({
         type: "input",
@@ -130,7 +126,7 @@ async function prompForMissingOptions(options) {
     if (
       !options.projectName &&
       def.name === "projectName" &&
-      questions.some(e => e.name !== def.name)
+      questions.some((e) => e.name !== def.name)
     ) {
       questions.push({
         type: "input",
@@ -142,7 +138,7 @@ async function prompForMissingOptions(options) {
     if (
       !options.projectDescription &&
       def.name === "projectDescription" &&
-      questions.some(e => e.name !== def.name)
+      questions.some((e) => e.name !== def.name)
     ) {
       questions.push({
         type: "input",
@@ -154,19 +150,19 @@ async function prompForMissingOptions(options) {
     if (
       !options.repoOwner &&
       def.name === "repoOwner" &&
-      questions.some(e => e.name !== def.name)
+      questions.some((e) => e.name !== def.name)
     ) {
       questions.push({
         type: "input",
         name: def.name,
         message: def.message,
-        default: def.default,
+        default: kebabCase(def.default),
       });
     }
     if (
       !options.sanityAuthToken &&
       def.name === "sanityAuthToken" &&
-      questions.some(e => e.name !== def.name)
+      questions.some((e) => e.name !== def.name)
     ) {
       questions.push({
         type: "input",
@@ -178,7 +174,7 @@ async function prompForMissingOptions(options) {
     if (
       !options.sanityProjectId &&
       def.name === "sanityProjectId" &&
-      questions.some(e => e.name !== def.name)
+      questions.some((e) => e.name !== def.name)
     ) {
       questions.push({
         type: "input",
@@ -190,7 +186,7 @@ async function prompForMissingOptions(options) {
     if (
       !options.sanityDataset &&
       def.name === "sanityDataset" &&
-      questions.some(e => e.name !== def.name)
+      questions.some((e) => e.name !== def.name)
     ) {
       questions.push({
         type: "input",
@@ -202,7 +198,7 @@ async function prompForMissingOptions(options) {
     if (
       !options.siteUrl &&
       def.name === "siteUrl" &&
-      questions.some(e => e.name !== def.name)
+      questions.some((e) => e.name !== def.name)
     ) {
       questions.push({
         type: "input",
@@ -228,12 +224,14 @@ async function prompForMissingOptions(options) {
     ...options,
     template: options.template || answers.template,
     git: options.git || answers.git,
-    gatsbyDefaultEnvironment: options.gatsbyDefaultEnvironment || answers.gatsbyDefaultEnvironment,
+    gatsbyDefaultEnvironment:
+      options.gatsbyDefaultEnvironment || answers.gatsbyDefaultEnvironment,
     nodeVersion: options.nodeVersion || answers.nodeVersion,
     ownersName: options.ownersName || answers.ownersName,
     projectName: options.projectName || answers.projectName,
-    projectDescription: options.projectDescription || answers.projectDescription,
-    repoOwner: options.repoOwner || answers.repoOwner,
+    projectDescription:
+      options.projectDescription || answers.projectDescription,
+    repoOwner: kebabCase(options.repoOwner) || kebabCase(answers.repoOwner),
     sanityAuthToken: options.sanityAuthToken || answers.sanityAuthToken,
     sanityProjectId: options.sanityProjectId || answers.sanityProjectId,
     sanityDataset: options.sanityDataset || answers.sanityDataset,
