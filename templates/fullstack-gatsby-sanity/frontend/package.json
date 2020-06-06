@@ -1,9 +1,19 @@
 {
-  "name": "create-sprout-gatsby",
-  "version": "0.0.0",
+  "name": "<% replace with project name kebab-case %>-backend",
+  "version": "1.0.0",
   "description": "<% replace with project description %>",
   "private": false,
-  "keywords": [],
+  "keywords": [
+    "netlife",
+    "netlife starter",
+    "netlife scaffolder",
+    "netlife bootstrapper",
+    "fullstack gatsby sanity",
+    "gatsby sanity",
+    "gatsby",
+    "sanity",
+    "fullstack"
+  ],
   "repository": {
     "type": "git",
     "url": "<% replace with project repo full url ssh %>"
@@ -53,7 +63,7 @@
     }
   ],
   "copyright": "Copyright (c) <% replace with owners name %> - All rights reserved.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "clean": "gatsby clean",
@@ -89,7 +99,7 @@
     "gatsby-plugin-eslint": "^2.0.8"
   },
   "engines": {
-    "node": "^v12.14.0"
+    "node": "^v<% replace with node version %>"
   },
   "browserslist": [
     ">0.2%",

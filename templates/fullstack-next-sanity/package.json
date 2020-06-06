@@ -71,7 +71,7 @@
     "setup": "npm i @sanity/cli -g && npm i && cd frontend && npm install && cd ../backend && npm install && cd .."
   },
   "engines": {
-    "node": "^v12.14.0"
+    "node": "^v<% replace with node version %>"
   },
   "browserslist": [
     ">0.2%",

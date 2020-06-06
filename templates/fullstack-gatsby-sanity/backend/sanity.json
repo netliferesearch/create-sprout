@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "project": {
+    "name": "<% replace with project name kebab-case %>-backend"
+  },
+  "api": {
+    "projectId": "overriden-by-env-file",
+    "dataset": "overriden-by-env-file"
+  },
+  "plugins": [],
+  "env": {},
+  "parts": []
+}

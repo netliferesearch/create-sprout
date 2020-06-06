@@ -1,0 +1,78 @@
+{
+  "name": "<% replace with project name kebab-case %>-frontend",
+  "version": "1.0.0",
+  "description": "<% replace with project description %>",
+  "private": false,
+  "keywords": [
+    "netlife",
+    "netlife starter",
+    "netlife scaffolder",
+    "netlife bootstrapper",
+    "fullstack next sanity",
+    "next sanity",
+    "next",
+    "sanity",
+    "fullstack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "<% replace with project repo full url ssh %>"
+  },
+  "author": {
+    "name": "Netlife Design",
+    "email": "hei@netlife.com",
+    "url": "http://netlife.com/"
+  },
+  "contributors": [
+    {
+      "name": "Aleksander Andersen",
+      "url": "https://github.com/lordaust"
+    },
+    {
+      "name": "Haakon Borch",
+      "url": "https://github.com/haakonmb"
+    },
+    {
+      "name": "Kevin Bodi",
+      "url": "https://github.com/KevinBodi"
+    },
+    {
+      "name": "Kristi Faye-Lund",
+      "url": "https://github.com/kfayelun"
+    },
+    {
+      "name": "Lars Tollefsen",
+      "url": "https://github.com/LarsTollefsen"
+    },
+    {
+      "name": "Leo Toneff",
+      "url": "https://github.com/bragle"
+    },
+    {
+      "name": "Milosz Hygen",
+      "url": "https://github.com/miloszhygen"
+    },
+    {
+      "name": "Sjur Bjørndalsæter",
+      "url": "https://github.com/kodehode"
+    },
+    {
+      "name": "Wallace Sidhrée",
+      "email": "i@dreamyguy.com",
+      "url": "https://github.com/dreamyguy"
+    }
+  ],
+  "copyright": "Copyright (c) <% replace with owners name %> - All rights reserved.",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": "^v<% replace with node version %>"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not op_mini all"
+  ]
+}

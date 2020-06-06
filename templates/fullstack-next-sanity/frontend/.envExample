@@ -1,2 +1,1 @@
-NEXT_ACTIVE_ENV = 'develop'
-SANITY_TOKEN = sanityTokenxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SANITY_TOKEN = <% replace with sanity token %>
