@@ -13,25 +13,68 @@
     "sanity",
     "fullstack"
   ],
-  "main": "config.js",
-  "scripts": {
-    "setup": "cd frontend && npm install && cd ../backend && npm install && cd ..",
-    "preSetup": "echo ⚡  About to install all dependencies needed in both frontend and backend.",
-    "postSetup": "echo 🎉  The application is now fully installed.",
-    "deploy:frontend": "",
-    "deploy:backend": "",
-    "deploy": "npm run deploy:backend && npm run deploy:frontend",
-    "preDeploy": "echo ⚡  About to deploy both frontend and backend.",
-    "postDeploy": "echo 🚀  The application is now fully deployed.",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Netlife Design <hei@netlife.com> (https://netlife.com/)",
+  "homepage": "<% replace with site url %>",
+  "repository": {
+    "type": "git",
+    "url": "<% replace with project repo full url ssh %>"
+  },
   "contributors": [
+    {
+      "name": "Aleksander Andersen",
+      "url": "https://github.com/lordaust"
+    },
+    {
+      "name": "Haakon Borch",
+      "url": "https://github.com/haakonmb"
+    },
+    {
+      "name": "Kevin Bodi",
+      "url": "https://github.com/KevinBodi"
+    },
+    {
+      "name": "Kristi Faye-Lund",
+      "url": "https://github.com/kfayelun"
+    },
+    {
+      "name": "Lars Tollefsen",
+      "url": "https://github.com/LarsTollefsen"
+    },
+    {
+      "name": "Leo Toneff",
+      "url": "https://github.com/bragle"
+    },
+    {
+      "name": "Milosz Hygen",
+      "url": "https://github.com/miloszhygen"
+    },
+    {
+      "name": "Sjur Bjørndalsæter",
+      "url": "https://github.com/kodehode"
+    },
     {
       "name": "Wallace Sidhrée",
       "email": "i@dreamyguy.com",
-      "url": "http://sidhree.com/"
+      "url": "https://github.com/dreamyguy"
     }
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "main": "config.js",
+  "scripts": {
+    "deploy": "npm run deploy:backend && npm run deploy:frontend",
+    "deploy:backend": "",
+    "deploy:frontend": "",
+    "postDeploy": "echo 🚀  The application is now fully deployed.",
+    "postSetup": "echo 🎉  The application is now fully installed.",
+    "preDeploy": "echo ⚡  About to deploy both frontend and backend.",
+    "preSetup": "echo ⚡  About to install all dependencies needed in both frontend and backend.",
+    "setup": "npm i @sanity/cli -g && npm i && cd frontend && npm install && cd ../backend && npm install && cd .."
+  },
+  "engines": {
+    "node": "^v12.14.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not op_mini all"
+  ]
 }

@@ -6,7 +6,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "<% replace with project repo full url %>"
+    "url": "<% replace with project repo full url ssh %>"
   },
   "author": {
     "name": "Netlife Design",

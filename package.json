@@ -76,7 +76,8 @@
     "just-kebab-case": "^1.1.0",
     "listr": "^0.14.3",
     "ncp": "^2.0.0",
-    "pkg-install": "^1.0.0"
+    "pkg-install": "^1.0.0",
+    "shelljs": "^0.8.4"
   },
   "engines": {
     "node": "^v12.14.0"
