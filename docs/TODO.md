@@ -3,7 +3,7 @@
 These strings need to be set through the CLI, with gracious fallbacks
 
 ```
-<% replace with gatsby active environment %> | develop
+<% replace with gatsby default environment %> | develop
 <% replace with owners name %> | Client Inc.
 <% replace with project description %> | Client Inc. is blah blah
 <% replace with project name %> | The Project Name

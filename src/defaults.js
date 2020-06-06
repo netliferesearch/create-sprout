@@ -1,53 +1,64 @@
-export default {
-  "gatsby-environment": {
-    message: "which gatsby environment?",
-    replace: "<% replace with gatsby active environment %>",
-    default: "develop"
+export default [
+  {
+    name: "gatsbyDefaultEnvironment",
+    message: "What will be the name of the default Gatsby environment?",
+    replace: "<% replace with gatsby default environment %>",
+    default: "develop",
   },
-  "node-version": {
+  {
+    name: "nodeVersion",
+    message: "Which 'node' version this project should be based on?",
     replace: "<% replace with node version %>",
-    default: "12.14.0"
+    default: "12.14.0",
   },
-  "owners-name": {
+  {
+    name: "ownersName",
+    message: "Who owns this project (for copyright purposes)?",
     replace: "<% replace with owners name %>",
-    default: "Client Inc."
+    default: "Client Inc.",
   },
-  "project-description": {
-    replace: "<% replace with project description %>",
-    default: "Client Inc. is blah blah"
-  },
-  "project-name": {
+  {
+    name: "projectName",
+    message: "What's the project's name?",
     replace: "<% replace with project name %>",
-    default: "The Project Name"
+    default: "The Project Name",
   },
-  "project-kebab-case": {
-    replace: "<% replace with project name kebab-case %>",
-    default: "the-project-name"
+  {
+    name: "projectDescription",
+    message: "What's the project's description?",
+    replace: "<% replace with project description %>",
+    default: "This project is about this and that",
   },
-  "repo-base-url": {
+  {
+    name: "repoOwner",
+    message: "What's the name of the repo owner?",
     replace: "<% replace with project repo base url %>",
-    default: "user/the-project-name"
+    default: "netliferesearch",
   },
-  "repo-full-url": {
-    replace: "<% replace with project repo full url %>",
-    default: "https://github.com/user/the-project-name"
-  },
-  "sanity-auth-token": {
+  {
+    name: "sanityAuthToken",
+    message: "What's the Sanity auth token?",
     replace: "<% replace with sanity token %>",
     default:
-      "a lengthy hash string that allows making requests to Sanity Studio through the frontend"
+      "a-lengthy-hash-string-that-allows-making-requests-to-Sanity-Studio-through-the-frontend",
   },
-  "sanity-project-id": {
+  {
+    name: "sanityProjectId",
+    message: "What's the Sanity project id?",
     replace: "<% replace with sanity project id %>",
     default:
-      "a short hash string that connects the local Sanity Studio to the remote one"
+      "a-short-hash-string-that-connects-the-local-Sanity-Studio-to-the-remote-one",
   },
-  "sanity-dataset": {
+  {
+    name: "sanityDataset",
+    message: "What's the name for Sanity's default dataset?",
     replace: "<% replace with sanity current dataset %>",
-    default: "production"
+    default: "production",
   },
-  "site-url": {
+  {
+    name: "siteUrl",
+    message: "What's the name for the website in production?",
     replace: "<% replace with site url %>",
-    default: "https://the-project-name.com"
-  }
-};
+    default: "https://the-project-name.com",
+  },
+];

@@ -1,2 +1,2 @@
-GATSBY_ACTIVE_ENV = <% replace with gatsby active environment %>
+GATSBY_ACTIVE_ENV = <% replace with gatsby default environment %>
 SANITY_TOKEN = <% replace with sanity token %>
