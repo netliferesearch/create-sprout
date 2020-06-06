@@ -17,7 +17,7 @@
   "homepage": "<% replace with site url %>",
   "repository": {
     "type": "git",
-    "url": "<% replace with project repo full url %>.git"
+    "url": "<% replace with project repo full url ssh %>"
   },
   "contributors": [
     {

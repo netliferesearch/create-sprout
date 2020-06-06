@@ -16,6 +16,8 @@ import shelljs from "shelljs";
 export const getDefaultValue = (type) =>
   defaults.find((f) => f.name === type && f.default).default;
 export const escapeAllSpaces = (str) => str.replace(/\s/g, "\\ ");
+export const escapeRegex = (str) =>
+  str.replace(/[-[\]{}()*+!<=:?.\/\\^$|#\s,]/g, "\\$&");
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
@@ -27,10 +29,36 @@ async function copyTemplateFiles(options) {
 }
 
 async function replaceStrings(options) {
+  const replaceDirectly = (de, type, mode) => {
+    if (de.name === type && mode) {
+      let strReplace = de.replace;
+      let strInput = escapeRegex(options[type]);
+      if (mode === "project-name-kebab") {
+        strReplace = "<% replace with project name kebab-case %>";
+        strInput = kebabCase(strInput);
+      } else if (mode === "project-repo-full-url") {
+        strReplace = "<% replace with project repo full url %>";
+        strInput = escapeRegex(
+          `http://github.com/${options.repoOwner}/${kebabCase(strInput)}`
+        );
+      } else if (mode === "project-repo-full-url-ssh") {
+        strReplace = "<% replace with project repo full url ssh %>";
+        strInput = escapeRegex(
+          `git@github.com:${options.repoOwner}/${kebabCase(strInput)}.git`
+        );
+      }
+      const cmd = `grep -rl --exclude-dir={node_modules,dist} --exclude=*.{lock,png,jpg,svg,woff} --exclude=package-lock.json "${strReplace}" * | xargs sed -i '' 's/${strReplace}/${strInput}/g'`;
+      if (shelljs.exec(cmd).code !== 0) {
+        shelljs.echo(`Error: Failed replaceStrings() for '${type}'`);
+        shelljs.exit(1);
+      }
+      shelljs.exec(cmd);
+    }
+  };
   const replaceWithDefault = (de, type) => {
     if (de.name === type) {
       const strReplace = de.replace;
-      const strInput = options[de.name];
+      const strInput = escapeRegex(options[de.name]);
       const cmd = `grep -rl --exclude-dir={node_modules,dist} --exclude=*.{lock,png,jpg,svg,woff} --exclude=package-lock.json "${strReplace}" * | xargs sed -i '' 's/${strReplace}/${strInput}/g'`;
       if (shelljs.exec(cmd).code !== 0) {
         shelljs.echo(`Error: Failed replaceStrings() for '${type}'`);
@@ -50,6 +78,8 @@ async function replaceStrings(options) {
     replaceWithDefault(def, "sanityProjectId");
     replaceWithDefault(def, "sanityDataset");
     replaceWithDefault(def, "siteUrl");
+    replaceDirectly(def, "projectName", "project-name-kebab");
+    replaceDirectly(def, "projectName", "project-repo-full-url-ssh");
     return;
   });
   return;
