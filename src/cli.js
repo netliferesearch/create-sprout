@@ -66,7 +66,9 @@ async function prompForMissingOptions(options) {
       projectName: options.projectName || getDefaultValue("projectName"),
       projectDescription:
         options.projectDescription || getDefaultValue("projectDescription"),
-      repoOwner: kebabCase(options.repoOwner) || getDefaultValue("repoOwner"),
+      repoOwner:
+        (options.repoOwner && kebabCase(options.repoOwner)) ||
+        getDefaultValue("repoOwner"),
       sanityAuthToken:
         options.sanityAuthToken || getDefaultValue("sanityAuthToken"),
       sanityProjectId:
@@ -231,7 +233,9 @@ async function prompForMissingOptions(options) {
     projectName: options.projectName || answers.projectName,
     projectDescription:
       options.projectDescription || answers.projectDescription,
-    repoOwner: kebabCase(options.repoOwner) || kebabCase(answers.repoOwner),
+    repoOwner:
+      (options.repoOwner && kebabCase(options.repoOwner)) ||
+      (answers.repoOwner && kebabCase(answers.repoOwner)),
     sanityAuthToken: options.sanityAuthToken || answers.sanityAuthToken,
     sanityProjectId: options.sanityProjectId || answers.sanityProjectId,
     sanityDataset: options.sanityDataset || answers.sanityDataset,
