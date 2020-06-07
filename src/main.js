@@ -1,6 +1,7 @@
 // Heavily based on:
 // https://github.com/dreamyguy/create-some-app
 
+import boxen from "boxen";
 import chalk from "chalk";
 import execa from "execa";
 import fs from "fs";
@@ -10,8 +11,9 @@ import ncp from "ncp";
 import path from "path";
 import { projectInstall } from "pkg-install";
 import { promisify } from "util";
-import defaults from "./defaults";
 import shelljs from "shelljs";
+import defaults from "./defaults";
+import { version } from "../package.json";
 
 export const getDefaultValue = (type) =>
   defaults.find((f) => f.name === type && f.default).default;
@@ -98,6 +100,17 @@ async function initGit(options) {
   return;
 }
 
+function welcome(message) {
+  console.log(
+    boxen(chalk.bold.rgb(131, 216, 25)(message), {
+      padding: 1,
+      margin: 1,
+      borderStyle: "double",
+      borderColor: "#83d819",
+    })
+  );
+}
+
 export async function createSprout(options) {
   options = {
     ...options,
@@ -133,6 +146,12 @@ export async function createSprout(options) {
     console.error("%s Invalid template name", chalk.red.bold("ERROR"));
     process.exit(1);
   }
+  // Show welcome message
+  welcome(
+    `Netlife Sprout 🌱 ${chalk.reset.white(
+      `- v${version}\n\nA CLI-based scaffolder that outputs tailored project starters`
+    )}`
+  );
   // Define tasks to be run
   const tasks = new Listr([
     {
